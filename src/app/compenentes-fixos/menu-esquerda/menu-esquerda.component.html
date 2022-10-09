@@ -1,0 +1,36 @@
+<nav class="navbar navbar-dark bg-dark menu-esquerda" *ngIf="!menuAtivo">
+  <ul>
+    <fa-icon [icon]="iCemiterio" class="my-2" title="Cemitérios" (click)="verificaSubMenu('cemiterio'); subMenuAtivo='cemiterio'"></fa-icon>
+    <fa-icon [icon]="iSepultura" class="my-2" title="Sepulturas" (click)="verificaSubMenu('sepultura'); subMenuAtivo='sepultura'"></fa-icon>
+    <fa-icon [icon]="iFalecido" class="my-2" title="Falecido" (click)="verificaSubMenu('falecido'); subMenuAtivo='falecido'"></fa-icon>
+    <fa-icon [icon]="iRelatorios" class="my-2" title="Relatórios" (click)="verificaSubMenu('relatorio'); subMenuAtivo='relatorio'"></fa-icon>
+    <fa-icon [icon]="iConfiguracao" class="my-2" title="Configurações" (click)="verificaSubMenu('configuracao'); subMenuAtivo='configuracao'"></fa-icon>
+  </ul>
+</nav>
+
+<nav class="navbar navbar-dark bg-dark menu-esquerda ativo" *ngIf="menuAtivo">
+  <ul>
+    <li class="my-2" (click)="verificaSubMenu('cemiterio'); subMenuAtivo='cemiterio'">
+      <fa-icon [icon]="iCemiterio" title="Cemitérios"></fa-icon>
+      <span>Cemitérios</span>
+    </li>
+    <li class="my-2" (click)="verificaSubMenu('sepultura'); subMenuAtivo='sepultura'">
+      <fa-icon [icon]="iSepultura" title="Sepulturas"></fa-icon>
+      <span>Sepulturas</span>
+    </li>
+    <li class="my-2" (click)="verificaSubMenu('falecido'); subMenuAtivo='falecido'">
+      <fa-icon [icon]="iFalecido" title="Falecidos"></fa-icon>
+      <span>Falecidos</span>
+    </li>
+    <li class="my-2" (click)="verificaSubMenu('relatorio'); subMenuAtivo='relatorio'">
+      <fa-icon [icon]="iRelatorios" title="Relatórios"></fa-icon>
+      <span>Relatórios</span>
+    </li>
+    <li class="my-2" (click)="verificaSubMenu('configuracao'); subMenuAtivo='configuracao'">
+      <fa-icon [icon]="iConfiguracao" title="Configurações"></fa-icon>
+      <span>Configurações</span>
+    </li>
+  </ul>
+</nav>
+
+<app-sub-menu-esquerda [subMenuAtivo]="subMenuAtivo" [aparecer]="mostrarSubMenu"></app-sub-menu-esquerda>

@@ -1,0 +1,63 @@
+.menu-esquerda {
+  float: left;
+  height: calc(100vh - 56px);
+  width: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+fa-icon {
+  width: 100%;
+  color: white;
+  font-size: 2em;
+  cursor: pointer;
+  text-align: center;
+  transition: ease-in-out;
+  transition-duration: 300ms;
+}
+
+fa-icon:hover {
+  background-color: #333a3f;
+  transition: ease-in-out;
+  transition-duration: 300ms;
+}
+
+li>span {
+  color: white;
+}
+
+.ativo {
+  width: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul>li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+ul>li>span {
+  cursor: pointer;
+}
+
+ul>li:hover {
+  background-color: #333a3f;
+  transition: ease-in-out;
+  transition-duration: 300ms;
+}

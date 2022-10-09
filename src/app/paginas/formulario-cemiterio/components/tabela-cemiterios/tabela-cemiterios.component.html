@@ -1,0 +1,17 @@
+<table class="table table-striped table-hover" *ngIf="cemiterios.length > 0">
+  <thead>
+  <tr>
+    <th *ngFor="let item of cabecalho">{{item}}</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let cemiterio of cemiterios">
+    <td >{{cemiterio.id}}</td>
+    <td >{{cemiterio.nome}}</td>
+    <td >{{cemiterio.endereco}} {{cemiterio.numero}}</td>
+    <td >{{cemiterio.cidade}}</td>
+    <td >{{cemiterio.estado}}</td>
+    <td >{{cemiterio.responsavel}}</td>
+  </tr>
+  </tbody>
+</table>

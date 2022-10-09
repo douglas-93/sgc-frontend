@@ -1,0 +1,6 @@
+<nav class="navbar navbar-dark bg-dark menu-esquerda" *ngIf="aparecer">
+  <h3>{{titulo}}</h3>
+  <ul>
+    <li routerLink="cemiterios" (click)="aparecer = !aparecer">Cadastro</li>
+  </ul>
+</nav>

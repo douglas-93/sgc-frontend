@@ -1,0 +1,25 @@
+.menu-esquerda {
+  float: left;
+  height: calc(100vh - 56px);
+  width: 12rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+h3 {
+  color: white;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  font-size: 1em;
+  color: white;
+  list-style: none;
+  cursor: pointer;
+}
