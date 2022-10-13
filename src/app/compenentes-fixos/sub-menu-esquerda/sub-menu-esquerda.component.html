@@ -1,6 +1,11 @@
-<nav class="navbar navbar-dark bg-dark menu-esquerda" *ngIf="aparecer">
-  <h3>{{titulo}}</h3>
-  <ul>
-    <li routerLink="cemiterios" (click)="aparecer = !aparecer">Cadastro</li>
-  </ul>
+<!--<nav *ngIf="aparecer" class="navbar navbar-dark bg-dark menu-esquerda">-->
+<nav *ngIf="aparecer" class="navbar menu-esquerda">
+    <h3 class="mb-4">{{titulo}}</h3>
+    <ul [ngSwitch]="subMenuAtivo">
+        <li *ngSwitchCase="'cemiterio'" (click)="aparecer = !aparecer" routerLink="cemiterios">Cadastro</li>
+        <li *ngSwitchCase="'sepultura'" (click)="aparecer = !aparecer" routerLink="cemiterios">Cadastro</li>
+        <li *ngSwitchCase="'sepultura'" (click)="aparecer = !aparecer" routerLink="cemiterios">Listagem</li>
+        <li *ngSwitchCase="'falecido'" (click)="aparecer = !aparecer" routerLink="cemiterios">Cadastro</li>
+        <li *ngSwitchCase="'falecido'" (click)="aparecer = !aparecer" routerLink="cemiterios">Sepultamento</li>
+    </ul>
 </nav>

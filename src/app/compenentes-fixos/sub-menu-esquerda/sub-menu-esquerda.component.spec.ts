@@ -1,23 +1,23 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { SubMenuEsquerdaComponent } from './sub-menu-esquerda.component';
+import {SubMenuEsquerdaComponent} from './sub-menu-esquerda.component';
 
 describe('SubMenuEsquerdaComponent', () => {
-  let component: SubMenuEsquerdaComponent;
-  let fixture: ComponentFixture<SubMenuEsquerdaComponent>;
+    let component: SubMenuEsquerdaComponent;
+    let fixture: ComponentFixture<SubMenuEsquerdaComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ SubMenuEsquerdaComponent ]
-    })
-    .compileComponents();
+    beforeEach(async () => {
+        await TestBed.configureTestingModule({
+            declarations: [SubMenuEsquerdaComponent]
+        })
+            .compileComponents();
 
-    fixture = TestBed.createComponent(SubMenuEsquerdaComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+        fixture = TestBed.createComponent(SubMenuEsquerdaComponent);
+        component = fixture.componentInstance;
+        fixture.detectChanges();
+    });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+    it('should create', () => {
+        expect(component).toBeTruthy();
+    });
 });

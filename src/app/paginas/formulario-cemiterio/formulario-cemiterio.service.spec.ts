@@ -1,16 +1,16 @@
-import { TestBed } from '@angular/core/testing';
+import {TestBed} from '@angular/core/testing';
 
-import { FormularioCemiterioService } from './formulario-cemiterio.service';
+import {FormularioCemiterioService} from './formulario-cemiterio.service';
 
 describe('FormularioCemiterioService', () => {
-  let service: FormularioCemiterioService;
+    let service: FormularioCemiterioService;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(FormularioCemiterioService);
-  });
+    beforeEach(() => {
+        TestBed.configureTestingModule({});
+        service = TestBed.inject(FormularioCemiterioService);
+    });
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
+    it('should be created', () => {
+        expect(service).toBeTruthy();
+    });
 });

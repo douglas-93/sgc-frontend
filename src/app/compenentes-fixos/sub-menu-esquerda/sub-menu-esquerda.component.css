@@ -1,25 +1,26 @@
 .menu-esquerda {
-  float: left;
-  height: calc(100vh - 56px);
-  width: 12rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: start;
+    float: left;
+    height: calc(100vh - 56px);
+    width: 12rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    background-color: #333a3f;
 }
 
 h3 {
-  color: white;
+    color: white;
 }
 
 ul {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 li {
-  font-size: 1em;
-  color: white;
-  list-style: none;
-  cursor: pointer;
+    font-size: 1em;
+    color: white;
+    list-style: none;
+    cursor: pointer;
 }

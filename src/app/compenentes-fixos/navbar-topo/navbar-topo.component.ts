@@ -1,20 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Output} from '@angular/core';
 
 @Component({
-  selector: 'app-navbar-topo',
-  templateUrl: './navbar-topo.component.html',
-  styleUrls: ['./navbar-topo.component.css']
+    selector: 'app-navbar-topo',
+    templateUrl: './navbar-topo.component.html',
+    styleUrls: ['./navbar-topo.component.css']
 })
 export class NavbarTopoComponent implements OnInit {
 
-  menuAtivo: boolean = false
+    @Output() menuAtivo: boolean = false
 
-  constructor() { }
+    constructor() {
+    }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+    }
 
-  expandeMenu() {
-    this.menuAtivo = !this.menuAtivo
-  }
+    expandeMenu() {
+        this.menuAtivo = !this.menuAtivo
+    }
 }

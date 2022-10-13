@@ -1,46 +1,51 @@
 <div class="container main mt-4">
-  <div class="alert alert-success alert-dismissible fade show d-flex" role="alert" *ngIf="resposta === 201">
-    <strong>Registro salvo com sucesso! </strong>
-    <button type="button" class="btn-close btn-close-black" aria-label="Close" (click)="resposta = 0"></button>
-  </div>
-  <div class="row my-2 justify-content-end">
-    <button (click)="salvar()" class="btn btn-success mx-1 col-1">Salvar</button>
-    <button class="btn btn-danger mx-1 col-1" *ngIf="!cadastro">Excluir</button>
-    <button (click)="voltar()" class="btn btn-dark mx-1 col-1">Voltar</button>
-  </div>
-  <form class="row" [formGroup]="formulario">
-    <div class="col-6">
-      <label for="nome">Nome do Cemitério</label>
-      <input class="form-control" id="nome" type="text" formControlName="nome">
-      <div class="alert alert-danger" role="alert" *ngIf="!camposValidos[0].valido">Nome do cemitério obrigatório</div>
+    <div *ngIf="resposta === 201 || resposta === 200 || resposta === 204" class="alert alert-success alert-dismissible fade show d-flex"
+         role="alert">
+        <strong>Operação realizada com sucesso! </strong>
+        <button (click)="resposta = 0" aria-label="Close" class="btn-close btn-close-black" type="button"></button>
     </div>
-    <div class="col-6">
-      <label for="responsavel">Nome do Responsável</label>
-      <input class="form-control" id="responsavel" type="text" formControlName="responsavel">
-      <div class="alert alert-danger" role="alert" *ngIf="!camposValidos[5].valido">Nome do responsável obrigatório</div>
+    <div class="row my-2 justify-content-end">
+        <button (click)="salvar()" class="btn btn-success mx-1 col-1">Salvar</button>
+        <button (click)="excluir()" *ngIf="!cadastro" class="btn btn-danger mx-1 col-1">Excluir</button>
+        <button (click)="voltar()" class="btn btn-dark mx-1 col-1">Voltar</button>
     </div>
-    <div class="col-4">
-      <label for="endereco">Endereço</label>
-      <input class="form-control" id="endereco" type="text" formControlName="endereco">
-      <div class="alert alert-danger" role="alert" *ngIf="!camposValidos[1].valido">Endereço obrigatório</div>
-    </div>
-    <div class="col-2">
-      <label for="numero">Número</label>
-      <input class="form-control" id="numero" type="text" formControlName="numero">
-      <div class="alert alert-danger" role="alert" *ngIf="!camposValidos[2].valido">Número obrigatório</div>
-    </div>
-    <div class="col-4">
-      <label for="cidade">Cidade</label>
-      <input class="form-control" id="cidade" type="text" formControlName="cidade">
-      <div class="alert alert-danger" role="alert" *ngIf="!camposValidos[3].valido">Cidade obrigatória</div>
-    </div>
-    <div class="col-2">
-      <label for="estado">Estado</label>
-      <select class="form-select" id="estado" formControlName="estado">
-        <option value="" selected>Selecione</option>
-        <option *ngFor="let estado of estados" value="{{estado.sigla}}">{{estado.nome}}</option>
-      </select>
-      <div class="alert alert-danger" role="alert" *ngIf="!camposValidos[4].valido">Selecione um estado</div>
-    </div>
-  </form>
+    <form [formGroup]="formulario" class="row">
+        <div class="col-6">
+            <label for="nome">Nome do Cemitério</label>
+            <input class="form-control" formControlName="nome" id="nome" type="text">
+            <div *ngIf="!camposValidos[0].valido" class="alert alert-danger" role="alert">Nome do cemitério
+                obrigatório
+            </div>
+        </div>
+        <div class="col-6">
+            <label for="responsavel">Nome do Responsável</label>
+            <input class="form-control" formControlName="responsavel" id="responsavel" type="text">
+            <div *ngIf="!camposValidos[5].valido" class="alert alert-danger" role="alert">Nome do responsável
+                obrigatório
+            </div>
+        </div>
+        <div class="col-4">
+            <label for="endereco">Endereço</label>
+            <input class="form-control" formControlName="endereco" id="endereco" type="text">
+            <div *ngIf="!camposValidos[1].valido" class="alert alert-danger" role="alert">Endereço obrigatório</div>
+        </div>
+        <div class="col-2">
+            <label for="numero">Número</label>
+            <input class="form-control" formControlName="numero" id="numero" type="text">
+            <div *ngIf="!camposValidos[2].valido" class="alert alert-danger" role="alert">Número obrigatório</div>
+        </div>
+        <div class="col-4">
+            <label for="cidade">Cidade</label>
+            <input class="form-control" formControlName="cidade" id="cidade" type="text">
+            <div *ngIf="!camposValidos[3].valido" class="alert alert-danger" role="alert">Cidade obrigatória</div>
+        </div>
+        <div class="col-2">
+            <label for="estado">Estado</label>
+            <select class="form-select" formControlName="estado" id="estado">
+                <option selected value="">Selecione</option>
+                <option *ngFor="let estado of estados" value="{{estado.sigla}}">{{estado.sigla}}</option>
+            </select>
+            <div *ngIf="!camposValidos[4].valido" class="alert alert-danger" role="alert">Selecione um estado</div>
+        </div>
+    </form>
 </div>

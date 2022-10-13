@@ -1,4 +1,8 @@
-.main {
-  height: calc(100vh - 56px);
-  width: 100%;
+.scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
 }
