@@ -12,6 +12,9 @@ import {HttpClientModule} from "@angular/common/http";
 import {TabelaCemiteriosComponent} from './paginas/formulario-cemiterio/components/tabela-cemiterios/tabela-cemiterios.component';
 import {CadastroCemiterioComponent} from './paginas/cadastro-cemiterio/cadastro-cemiterio.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import { SepulturaMainComponent } from './paginas/sepultura-main/sepultura-main.component';
+import { TabelaSepulturasComponent } from './paginas/sepultura-main/components/tabela-sepulturas/tabela-sepulturas.component';
+import { SepulturaCadastroComponent } from './paginas/sepultura-cadastro/sepultura-cadastro.component';
 
 @NgModule({
     declarations: [
@@ -21,7 +24,10 @@ import {ReactiveFormsModule} from "@angular/forms";
         SubMenuEsquerdaComponent,
         FormularioCemiterioComponent,
         TabelaCemiteriosComponent,
-        CadastroCemiterioComponent
+        CadastroCemiterioComponent,
+        SepulturaMainComponent,
+        TabelaSepulturasComponent,
+        SepulturaCadastroComponent
     ],
     imports: [
         BrowserModule,

@@ -7,6 +7,9 @@
     align-items: center;
     justify-content: start;
     background-color: var(--sub-menu-bg-color);
+    position: absolute;
+    left: 80px;
+    z-index: 2;
 }
 
 h3 {

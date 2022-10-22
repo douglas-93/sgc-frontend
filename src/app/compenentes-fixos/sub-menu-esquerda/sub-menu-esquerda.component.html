@@ -3,8 +3,7 @@
     <h3 class="mb-4">{{titulo}}</h3>
     <ul [ngSwitch]="subMenuAtivo">
         <li class="my-2" *ngSwitchCase="'cemiterio'" (click)="aparecer = !aparecer" routerLink="cemiterios">Cadastro</li>
-        <li class="my-2" *ngSwitchCase="'sepultura'" (click)="aparecer = !aparecer" routerLink="cemiterios">Cadastro</li>
-        <li class="my-2" *ngSwitchCase="'sepultura'" (click)="aparecer = !aparecer" routerLink="cemiterios">Listagem</li>
+        <li class="my-2" *ngSwitchCase="'sepultura'" (click)="aparecer = !aparecer" routerLink="sepulturas">Cadastro</li>
         <li class="my-2" *ngSwitchCase="'falecido'" (click)="aparecer = !aparecer" routerLink="cemiterios">Cadastro</li>
         <li class="my-2" *ngSwitchCase="'falecido'" (click)="aparecer = !aparecer" routerLink="cemiterios">Sepultamento</li>
     </ul>
