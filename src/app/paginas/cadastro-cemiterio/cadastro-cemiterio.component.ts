@@ -2,6 +2,10 @@ import {Component, OnInit} from '@angular/core';
 import {CemiterioModel} from "../../models/cemiterio.model";
 import {FormularioCemiterioService} from "../formulario-cemiterio/formulario-cemiterio.service";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {faArrowRotateLeft, faSave, faTrash} from "@fortawesome/free-solid-svg-icons";
+import {ActivatedRoute} from "@angular/router";
+import {logMessages} from "@angular-devkit/build-angular/src/builders/browser-esbuild/esbuild";
+
 
 @Component({
     selector: 'app-cadastro-cemiterio',
@@ -10,6 +14,9 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 })
 export class CadastroCemiterioComponent implements OnInit {
 
+    faExcluir = faTrash
+    faSalvar = faSave
+    faVoltar = faArrowRotateLeft
     estados: any
     cadastro: boolean = false
     resposta: number = 0
@@ -34,14 +41,16 @@ export class CadastroCemiterioComponent implements OnInit {
 
 
     constructor(private service: FormularioCemiterioService,
-                private formBuilder: FormBuilder) {
+                private formBuilder: FormBuilder,
+                private route: ActivatedRoute) {
     }
 
     ngOnInit(): void {
         this.buscaEstados()
         this.verificaCadastro()
         this.preencheForm()
-        console.log(window.location.href.split('/')[4])
+        console.log(window.location.href.includes("edit"))
+        console.log(this.route.url.subscribe(par => console.log(par[1]['path'])))
     }
 
     buscaEstados() {
@@ -97,7 +106,6 @@ export class CadastroCemiterioComponent implements OnInit {
             let id = parseInt(window.location.href.split('/')[5])
             this.service.buscarCemiterioPorId(id).subscribe(
                 res => {
-                    console.log(res)
                     this.formulario.controls['nome'].setValue(res.nome)
                     this.formulario.controls['endereco'].setValue(res.endereco)
                     this.formulario.controls['cidade'].setValue(res.cidade)

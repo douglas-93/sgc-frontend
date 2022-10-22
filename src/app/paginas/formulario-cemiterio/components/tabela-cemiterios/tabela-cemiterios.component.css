@@ -1,6 +1,12 @@
-.icone {
-    border: #333a3f solid 1px;
-    border-radius: 5px;
-    padding: 0.3em;
-    cursor: pointer;
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: var(--btn-border) solid 1px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+th, td {
+    border: var(--btn-border) solid 1px;
 }

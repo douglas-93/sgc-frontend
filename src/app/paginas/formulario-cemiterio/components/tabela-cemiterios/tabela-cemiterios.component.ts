@@ -12,7 +12,7 @@ import {Router} from "@angular/router";
 export class TabelaCemiteriosComponent implements OnInit {
 
     @Input() cemiterios: CemiterioModel[] = []
-    cabecalho = ["ID", "Nome", "Endereço", "Cidade", "Estado", "Responsável", "Editar"]
+    cabecalho = ["Editar", "Nome", "Endereço", "Cidade", "Estado", "Responsável"]
     iconeEditar = faPencil
 
     constructor(private service: FormularioCemiterioService, private router: Router) {

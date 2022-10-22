@@ -1,5 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+    --nav-bg-color: #375471;
+    --menu-bg-color: #2d323d;
+    --sub-menu-bg-color: #22262e;
+    --menu-hover: #67738c;
+    --btn-border: #bfbfbf;
+    --btn-color: #666666;
+    --btn-bg-color: #ffffff;
+    --btn-border-hover: #dddddd;
+    --btn-color-hover: #333333;
+    --btn-bg-color-hover: #e6e6e6;
+
+}
+
 * {
     margin: 0;
     padding: 0;
+}
+
+.btn-custom {
+    background-color: var(--btn-bg-color);
+    border: var(--btn-border) solid 1px;
+    color: var(--btn-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 400;
+    border-radius: 4px;
+    padding: 2px 5px;
+    transition: ease-in-out 0.2s;
+}
+.btn-custom:hover {
+    background-color: var(--btn-bg-color-hover);
+    color: var(--btn-color-hover);
+    border-color: var(--btn-border-hover);
+}
+
+.btn-custom fa-icon {
+    font-size: 14px;
+    font-weight: bold;
+    padding-right: 4px;
 }

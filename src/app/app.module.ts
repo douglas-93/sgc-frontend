@@ -9,9 +9,7 @@ import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {SubMenuEsquerdaComponent} from './compenentes-fixos/sub-menu-esquerda/sub-menu-esquerda.component';
 import {FormularioCemiterioComponent} from './paginas/formulario-cemiterio/formulario-cemiterio.component';
 import {HttpClientModule} from "@angular/common/http";
-import {
-    TabelaCemiteriosComponent
-} from './paginas/formulario-cemiterio/components/tabela-cemiterios/tabela-cemiterios.component';
+import {TabelaCemiteriosComponent} from './paginas/formulario-cemiterio/components/tabela-cemiterios/tabela-cemiterios.component';
 import {CadastroCemiterioComponent} from './paginas/cadastro-cemiterio/cadastro-cemiterio.component';
 import {ReactiveFormsModule} from "@angular/forms";
 

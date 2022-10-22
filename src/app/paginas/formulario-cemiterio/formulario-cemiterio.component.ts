@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormularioCemiterioService} from "./formulario-cemiterio.service";
 import {CemiterioModel} from "../../models/cemiterio.model";
+import {faSearch, faPlus, faArrowRotateLeft} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
     selector: 'app-formulario-cemiterio',
@@ -11,6 +12,9 @@ export class FormularioCemiterioComponent implements OnInit {
 
     cemiterios: CemiterioModel[] = []
     estados: any;
+    faFiltro = faSearch;
+    faNovo = faPlus
+    faVoltar = faArrowRotateLeft
 
     constructor(private service: FormularioCemiterioService) {
     }

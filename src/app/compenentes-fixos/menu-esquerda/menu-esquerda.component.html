@@ -1,4 +1,4 @@
-<nav *ngIf="!menuAtivo" class="navbar navbar-dark bg-dark menu-esquerda">
+<nav *ngIf="!menuAtivo" class="navbar navbar-dark menu-esquerda">
     <ul>
         <fa-icon (click)="verificaSubMenu('cemiterio'); subMenuAtivo='cemiterio'" [icon]="iCemiterio" class="my-2"
                  title="Cemitérios"></fa-icon>
@@ -13,7 +13,7 @@
     </ul>
 </nav>
 
-<nav *ngIf="menuAtivo" class="navbar navbar-dark bg-dark menu-esquerda ativo">
+<nav *ngIf="menuAtivo" class="navbar navbar-dark menu-esquerda ativo">
     <ul>
         <li (click)="verificaSubMenu('cemiterio'); subMenuAtivo='cemiterio'" class="my-2">
             <fa-icon [icon]="iCemiterio" title="Cemitérios"></fa-icon>
