@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {CemiterioModel} from "../../../../models/cemiterio.model";
 import {faPencil} from "@fortawesome/free-solid-svg-icons";
-import {FormularioCemiterioService} from "../../formulario-cemiterio.service";
+import {CemiterioService} from "../../../../services/cemiterio.service";
 import {Router} from "@angular/router";
 
 @Component({
@@ -15,7 +15,7 @@ export class TabelaCemiteriosComponent implements OnInit {
     cabecalho = ["Editar", "Nome", "Endereço", "Cidade", "Estado", "Responsável"]
     iconeEditar = faPencil
 
-    constructor(private service: FormularioCemiterioService, private router: Router) {
+    constructor(private service: CemiterioService, private router: Router) {
     }
 
     ngOnInit(): void {

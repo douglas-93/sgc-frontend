@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormularioCemiterioService} from "./formulario-cemiterio.service";
+import {CemiterioService} from "../../services/cemiterio.service";
 import {CemiterioModel} from "../../models/cemiterio.model";
 import {faSearch, faPlus, faArrowRotateLeft} from "@fortawesome/free-solid-svg-icons";
 
@@ -16,7 +16,7 @@ export class FormularioCemiterioComponent implements OnInit {
     faNovo = faPlus
     faVoltar = faArrowRotateLeft
 
-    constructor(private service: FormularioCemiterioService) {
+    constructor(private service: CemiterioService) {
     }
 
     ngOnInit(): void {

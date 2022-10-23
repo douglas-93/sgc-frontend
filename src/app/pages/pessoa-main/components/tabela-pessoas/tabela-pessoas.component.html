@@ -1,0 +1,18 @@
+<table class="table table-striped table-hover">
+    <thead>
+    <tr>
+        <th *ngFor="let item of cabecalho" class="text-center">{{item}}</th>
+    </tr>
+    </thead>
+    <tbody *ngIf="pessoas.length > 0">
+    <tr #row (dblclick)="editar(row.id)" *ngFor="let pessoa of pessoas" id="{{pessoa.id}}"
+        style="cursor:pointer;">
+        <td>
+            <fa-icon (click)="editar(row.id)" [icon]="iconeEditar" class="btn-custom m-auto w-50 p-2"></fa-icon>
+        </td>
+        <td>{{pessoa.nome}}</td>
+        <td class="text-center">{{pessoa.cpf | cpf}}</td>
+        <td class="text-center">{{pessoa.dataNascimento | date: 'dd/MM/yyyy'}}</td>
+    </tr>
+    </tbody>
+</table>

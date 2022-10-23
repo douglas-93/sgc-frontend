@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {CemiterioModel} from "../../models/cemiterio.model";
 import {faArrowRotateLeft, faPlus, faSearch} from "@fortawesome/free-solid-svg-icons";
-import {FormularioCemiterioService} from "../formulario-cemiterio/formulario-cemiterio.service";
+import {CemiterioService} from "../../services/cemiterio.service";
 import {SepulturaModel} from "../../models/sepultura.model";
-import {SepulturaServiceService} from "./sepultura.service.service";
+import {SepulturaService} from "../../services/sepultura.service";
 
 @Component({
     selector: 'app-sepultura-main',
@@ -14,12 +14,12 @@ export class SepulturaMainComponent implements OnInit {
 
     cemiterios: CemiterioModel[] = []
     sepulturas: SepulturaModel[] = []
-    faFiltro = faSearch;
+    faFiltro = faSearch
     faNovo = faPlus
     faVoltar = faArrowRotateLeft
 
-    constructor(private cemiterioService: FormularioCemiterioService,
-                private sepulturaService: SepulturaServiceService) {
+    constructor(private cemiterioService: CemiterioService,
+                private sepulturaService: SepulturaService) {
     }
 
     ngOnInit(): void {

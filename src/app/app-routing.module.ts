@@ -1,9 +1,11 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {FormularioCemiterioComponent} from "./paginas/formulario-cemiterio/formulario-cemiterio.component";
-import {CadastroCemiterioComponent} from "./paginas/cadastro-cemiterio/cadastro-cemiterio.component";
-import {SepulturaMainComponent} from "./paginas/sepultura-main/sepultura-main.component";
-import {SepulturaCadastroComponent} from "./paginas/sepultura-cadastro/sepultura-cadastro.component";
+import {FormularioCemiterioComponent} from "./pages/formulario-cemiterio/formulario-cemiterio.component";
+import {CadastroCemiterioComponent} from "./pages/cadastro-cemiterio/cadastro-cemiterio.component";
+import {SepulturaMainComponent} from "./pages/sepultura-main/sepultura-main.component";
+import {SepulturaCadastroComponent} from "./pages/sepultura-cadastro/sepultura-cadastro.component";
+import {PessoaMainComponent} from "./pages/pessoa-main/pessoa-main.component";
+import {PessoaCadastroComponent} from "./pages/pessoa-cadastro/pessoa-cadastro.component";
 
 const routes: Routes = [
     {path: 'cemiterios', component: FormularioCemiterioComponent},
@@ -11,7 +13,10 @@ const routes: Routes = [
     {path: 'cemiterios/edit/:id', component: CadastroCemiterioComponent},
     {path: 'sepulturas', component: SepulturaMainComponent},
     {path: 'sepulturas/cad', component: SepulturaCadastroComponent},
-    {path: 'sepulturas/edit/:id', component: SepulturaCadastroComponent}
+    {path: 'sepulturas/edit/:id', component: SepulturaCadastroComponent},
+    {path: 'pessoas', component: PessoaMainComponent},
+    {path: 'pessoas/cad', component: PessoaCadastroComponent},
+    {path: 'pessoas/edit/:id', component: PessoaCadastroComponent},
 ];
 
 @NgModule({

@@ -6,6 +6,6 @@ export class SepulturaModel {
     cemiterio?: CemiterioModel
 
     public constructor(init?: Partial<SepulturaModel>) {
-        Object.assign(this, init);
+        Object.assign(this, init)
     }
 }

@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { SepulturaServiceService } from './sepultura.service.service';
+import { SepulturaService } from './sepultura.service';
 
 describe('SepulturaServiceService', () => {
-  let service: SepulturaServiceService;
+  let service: SepulturaService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(SepulturaServiceService);
+    service = TestBed.inject(SepulturaService);
   });
 
   it('should be created', () => {

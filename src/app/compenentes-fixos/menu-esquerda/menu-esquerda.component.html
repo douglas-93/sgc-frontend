@@ -4,7 +4,7 @@
                  title="Cemitérios"></fa-icon>
         <fa-icon (click)="verificaSubMenu('sepultura'); subMenuAtivo='sepultura'" [icon]="iSepultura" class="my-2"
                  title="Sepulturas"></fa-icon>
-        <fa-icon (click)="verificaSubMenu('falecido'); subMenuAtivo='falecido'" [icon]="iFalecido" class="my-2"
+        <fa-icon (click)="verificaSubMenu('falecido'); subMenuAtivo='pessoa'" [icon]="iFalecido" class="my-2"
                  title="Falecido"></fa-icon>
         <fa-icon (click)="verificaSubMenu('relatorio'); subMenuAtivo='relatorio'" [icon]="iRelatorios" class="my-2"
                  title="Relatórios"></fa-icon>
@@ -24,8 +24,8 @@
             <span>Sepulturas</span>
         </li>
         <li (click)="verificaSubMenu('falecido'); subMenuAtivo='falecido'" class="my-2">
-            <fa-icon [icon]="iFalecido" title="Falecidos"></fa-icon>
-            <span>Falecidos</span>
+            <fa-icon [icon]="iFalecido" title="Pessoas"></fa-icon>
+            <span>Pessoas</span>
         </li>
         <li (click)="verificaSubMenu('relatorio'); subMenuAtivo='relatorio'" class="my-2">
             <fa-icon [icon]="iRelatorios" title="Relatórios"></fa-icon>

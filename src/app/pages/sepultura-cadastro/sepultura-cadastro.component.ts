@@ -3,9 +3,9 @@ import {faArrowRotateLeft, faSave, faTrash} from "@fortawesome/free-solid-svg-ic
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {ActivatedRoute} from "@angular/router";
 import {CemiterioModel} from "../../models/cemiterio.model";
-import {FormularioCemiterioService} from "../formulario-cemiterio/formulario-cemiterio.service";
+import {CemiterioService} from "../../services/cemiterio.service";
 import {SepulturaModel} from "../../models/sepultura.model";
-import {SepulturaServiceService} from "../sepultura-main/sepultura.service.service";
+import {SepulturaService} from "../../services/sepultura.service";
 
 @Component({
     selector: 'app-sepultura-cadastro',
@@ -32,8 +32,8 @@ export class SepulturaCadastroComponent implements OnInit {
 
     constructor(private formBuilder: FormBuilder,
                 private route: ActivatedRoute,
-                private cemiterioService: FormularioCemiterioService,
-                private sepulturaService: SepulturaServiceService) {
+                private cemiterioService: CemiterioService,
+                private sepulturaService: SepulturaService) {
     }
 
     ngOnInit(): void {

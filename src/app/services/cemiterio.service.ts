@@ -1,12 +1,12 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 
-import {CemiterioModel} from "../../models/cemiterio.model";
+import {CemiterioModel} from "../models/cemiterio.model";
 
 @Injectable({
     providedIn: 'root'
 })
-export class FormularioCemiterioService {
+export class CemiterioService {
 
     apiCemiterios: string = 'http://localhost:8080/cemiterios'
     apiEstados: string = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados?orderBy=nome'

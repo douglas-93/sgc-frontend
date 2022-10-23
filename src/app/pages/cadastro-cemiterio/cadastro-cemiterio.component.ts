@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {CemiterioModel} from "../../models/cemiterio.model";
-import {FormularioCemiterioService} from "../formulario-cemiterio/formulario-cemiterio.service";
+import {CemiterioService} from "../../services/cemiterio.service";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {faArrowRotateLeft, faSave, faTrash} from "@fortawesome/free-solid-svg-icons";
 import {ActivatedRoute} from "@angular/router";
@@ -40,7 +40,7 @@ export class CadastroCemiterioComponent implements OnInit {
     ]
 
 
-    constructor(private service: FormularioCemiterioService,
+    constructor(private service: CemiterioService,
                 private formBuilder: FormBuilder,
                 private route: ActivatedRoute) {
     }

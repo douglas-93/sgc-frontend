@@ -2,9 +2,17 @@
 <nav *ngIf="aparecer" class="navbar menu-esquerda">
     <h3 class="mb-4">{{titulo}}</h3>
     <ul [ngSwitch]="subMenuAtivo">
-        <li class="my-2" *ngSwitchCase="'cemiterio'" (click)="aparecer = !aparecer" routerLink="cemiterios">Cadastro</li>
-        <li class="my-2" *ngSwitchCase="'sepultura'" (click)="aparecer = !aparecer" routerLink="sepulturas">Cadastro</li>
-        <li class="my-2" *ngSwitchCase="'falecido'" (click)="aparecer = !aparecer" routerLink="cemiterios">Cadastro</li>
-        <li class="my-2" *ngSwitchCase="'falecido'" (click)="aparecer = !aparecer" routerLink="cemiterios">Sepultamento</li>
+        <li class="my-2" *ngSwitchCase="'cemiterio'" (click)="aparecer = !aparecer" routerLink="cemiterios">
+            <fa-icon [icon]="faIcon" class="mx-2"></fa-icon> Cadastro
+        </li>
+        <li class="my-2" *ngSwitchCase="'sepultura'" (click)="aparecer = !aparecer" routerLink="sepulturas">
+            <fa-icon [icon]="faIcon" class="mx-2"></fa-icon> Cadastro
+        </li>
+        <li class="my-2" *ngSwitchCase="'pessoa'" (click)="aparecer = !aparecer" routerLink="pessoas">
+            <fa-icon [icon]="faIcon" class="mx-2"></fa-icon> Cadastro
+        </li>
+        <li class="my-2" *ngSwitchCase="'pessoa'" (click)="aparecer = !aparecer" routerLink="pessoas">
+            <fa-icon [icon]="faIcon" class="mx-2"></fa-icon> Sepultamento
+        </li>
     </ul>
 </nav>

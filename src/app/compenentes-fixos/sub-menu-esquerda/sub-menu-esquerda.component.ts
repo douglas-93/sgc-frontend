@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {faClipboardList} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
     selector: 'app-sub-menu-esquerda',
@@ -10,6 +11,7 @@ export class SubMenuEsquerdaComponent implements OnInit {
     @Input() subMenuAtivo = ''
     @Input() aparecer: boolean = false
     titulo: string = ''
+    faIcon = faClipboardList
 
     constructor() {
     }
@@ -25,8 +27,8 @@ export class SubMenuEsquerdaComponent implements OnInit {
             case 'sepultura':
                 this.titulo = 'Sepulturas'
                 break
-            case 'falecido':
-                this.titulo = 'Falecidos'
+            case 'pessoa':
+                this.titulo = 'Pessoas'
                 break
             case 'relatorio':
                 this.titulo = 'Relatórios'
