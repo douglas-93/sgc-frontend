@@ -19,19 +19,21 @@
         </button>
     </div>
 
-    <form class="row">
+    <form [formGroup]="formulario" class="row">
         <div class="my-1 col-6">
             <label for="nome">Nome</label>
-            <input class="form-control form-control-sm" id="nome" type="text">
+            <input formControlName="nome" class="form-control form-control-sm" id="nome" type="text">
         </div>
         <div class="my-1 col-2">
             <label for="cpf">CPF</label>
-            <input #cpf (keyup)="soNumeros(cpf.value)" [(ngModel)]="cpfNumero" class="form-control form-control-sm" id="cpf"
-                   maxlength="11" name="cpf" type="text">
+<!--            <input #cpf (keyup)="soNumeros(cpf.value)" [(ngModel)]="cpfNumero" class="form-control form-control-sm" id="cpf"-->
+<!--                   maxlength="14" name="cpf" type="text" >-->
+            <input #cpf [ngModel]="cpf.value | cpf" (ngModelChange)="cpf.value=$event" class="form-control form-control-sm" id="cpf"
+                   maxlength="14" name="cpf" type="text" formControlName="cpf">
         </div>
         <div class="my-1 col-2">
             <label for="dataNasc">Data de Nascimento</label>
-            <input class="form-control form-control-sm" id="dataNasc" type="date">
+            <input class="form-control form-control-sm" id="dataNasc" type="date" formControlName="nascimento">
         </div>
     </form>
 </div>
